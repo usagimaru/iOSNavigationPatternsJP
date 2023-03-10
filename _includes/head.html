@@ -1,9 +1,14 @@
+{% if site.host == site.localhost %}
+{% assign baseurl = site.url %}
+{% else %}
+{% assign baseurl = site.indexurl %}
+{% endif %}
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="{{ site.indexurl }}/assets/css/styles.css">
-<link rel="icon" href="{{ site.indexurl }}/assets/images/favicon.png">
+<link rel="stylesheet" href="{{ baseurl }}/assets/css/styles.css">
+<link rel="icon" href="{{ baseurl }}/assets/images/favicon.png">
 <title>{{ site.title }}</title>
 <meta name="description" content="{{ site.description }}">
 
@@ -11,8 +16,8 @@
 <meta property="og:title"        content="{{ site.title }}">
 <meta property="og:description"  content="{{ site.description }}">
 <meta property="og:locale"       content="ja_JP">
-<meta property="og:url"          content="{{ site.indexurl }}">
-<meta property="og:image"        content="{{ site.indexurl }}/assets/images/cover@2x.png">
+<meta property="og:url"          content="{{ baseurl }}">
+<meta property="og:image"        content="{{ baseurl }}/assets/images/cover@2x.png">
 <meta name="twitter:card"        content="summary_large_image">
 <meta name="twitter:title"       content="{{ site.title }}">
 <meta name="twitter:description" content="{{ site.description }}">

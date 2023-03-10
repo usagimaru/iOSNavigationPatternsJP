@@ -4,6 +4,12 @@ title: モダンiOSナビゲーションパターン 日本語訳
 
 <p class="subtitle">Modern iOS Navigation Patterns (Japanese Ver.)</p>
 
+{% if site.host == site.localhost %}
+{% assign baseurl = site.url %}
+{% else %}
+{% assign baseurl = site.indexurl %}
+{% endif %}
+
 {% include desc.html %}
 
 <!-- <div>Last modified at: {{ page.last_modified_at | date: "%Y-%m-%d %H:%M:%S" }}</div> -->
@@ -25,7 +31,7 @@ title: モダンiOSナビゲーションパターン 日本語訳
 
 ### ドリルダウン (Drill-Down)
 
-<figure><img alt="カスケードリストの概念を示すためにドリルダウンの列を横に並べた図" src="{{ site.indexurl }}/assets/images/drill-down.svg"></figure>
+<figure><img alt="カスケードリストの概念を示すためにドリルダウンの列を横に並べた図" src="{{ baseurl }}/assets/images/drill-down.svg"></figure>
 
 ドリルダウンナビゲーションは、情報のツリー構造をカスケーディングリストとして構成し、レベル単位やスクリーン単位で横断します。
 
@@ -63,7 +69,7 @@ iOSのドリルダウンナビゲーションは、macOSのFinderが採用する
 
 ### フラット (Flat)
 
-<figure><img alt="下部にタブバーを持つiPhoneと、サイドバーを持つiPadの図" src="{{ site.indexurl }}/assets/images/flat.svg"></figure>
+<figure><img alt="下部にタブバーを持つiPhoneと、サイドバーを持つiPadの図" src="{{ baseurl }}/assets/images/flat.svg"></figure>
 
 フラットナビゲーションパターンは、ルートレベルで階層を並列に区分し、大抵はタブバーの形で表します。iPadOSではタブバーの代わりにサイドバーを用いることがあります。
 
@@ -99,7 +105,7 @@ iOSのドリルダウンナビゲーションは、macOSのFinderが採用する
 
 ### ピラミッド (Pyramid)
 
-<figure><img alt="サムネイルが並ぶ一覧と、ページインジケーター付きの詳細ビューが3つ並んでいる図" src="{{ site.indexurl }}/assets/images/pyramid.svg"></figure>
+<figure><img alt="サムネイルが並ぶ一覧と、ページインジケーター付きの詳細ビューが3つ並んでいる図" src="{{ baseurl }}/assets/images/pyramid.svg"></figure>
 
 ピラミッドパターンでは、同じ階層にある兄弟ビュー間を移動する際に、わざわざ親スクリーン（レベル）に戻ることなくその場で素早く移動することができます。
 
@@ -112,7 +118,7 @@ iOSの “写真” appはピラミッドパターンを採用しています。
 
 ### ハブ・アンド・スポーク (Hub-and-Spoke)<sup class="note">[2](#note2)</sup>
 
-<figure><img alt="iPhoneのホーム画面（ハブ）と、2つのapp（スポーク）の図" src="{{ site.indexurl }}/assets/images/hub-and-spoke.svg"></figure>
+<figure><img alt="iPhoneのホーム画面（ハブ）と、2つのapp（スポーク）の図" src="{{ baseurl }}/assets/images/hub-and-spoke.svg"></figure>
 
 ハブ・アンド・スポークパターンは、互いに関連性の低い項目群で構成される大きなコレクションを階層化させたい場合に最適です。子ビューはフルスクリーンで展開されますが、それらを切り替えるためには最初のハブに戻る動きをします。
 
@@ -135,7 +141,7 @@ iPhoneの画面下部にあるホームインジケータ（横長の棒のこ�
 
 ### 強いモーダル (High-Friction Modal)
 
-<figure><img alt="iOSのモーダルシートとモーダルアラートダイアログの図" src="{{ site.indexurl }}/assets/images/high-friction-modal.svg"></figure>
+<figure><img alt="iOSのモーダルシートとモーダルアラートダイアログの図" src="{{ baseurl }}/assets/images/high-friction-modal.svg"></figure>
 
 <small class="callout"><span class="callout-title">訳者注釈</span>：
 “High-Friction”を「（干渉の度合いが）強い」と訳しています。
@@ -152,7 +158,7 @@ iPhoneの画面下部にあるホームインジケータ（横長の棒のこ�
 
 ### 弱いモーダル (Low-Friction Modal)
 
-<figure><img alt="シンプルなクローズボタンを持つシートと、フルスクリーンメディアプレーヤーのイラスト。iPadのコンテクストメニューとポップオーバーのイラスト。" src="{{ site.indexurl }}/assets/images/low-friction-modal.svg"></figure>
+<figure><img alt="シンプルなクローズボタンを持つシートと、フルスクリーンメディアプレーヤーのイラスト。iPadのコンテクストメニューとポップオーバーのイラスト。" src="{{ baseurl }}/assets/images/low-friction-modal.svg"></figure>
 
 <small class="callout"><span class="callout-title">訳者注釈</span>：
 “Low-Friction”を「（干渉の度合いが）弱い」と訳しています。
@@ -162,7 +168,7 @@ iPhoneの画面下部にあるホームインジケータ（横長の棒のこ�
 
 すなわち、簡単に破棄できるということです。「弱い干渉」とは、そのモードから逃れる方法を深く考える必要がないことを意味します。閉じるボタンを押すか、シートを下にスワイプするか、コンテクストメニューやポップオーバーの外側をタップしたりすれば、この種のモーダルビューはすぐに消えてしまいます。
 
-<figure><img alt="モーダルアラートダイアログのメッセージと、ダイアログを解除する唯一の手段であるOKボタンのイラスト" src="{{ site.indexurl }}/assets/images/low-friction-modal-2.svg"></figure>
+<figure><img alt="モーダルアラートダイアログのメッセージと、ダイアログを解除する唯一の手段であるOKボタンのイラスト" src="{{ baseurl }}/assets/images/low-friction-modal-2.svg"></figure>
 
 OKボタンが一つしかないアラートダイアログは比較的簡単に排除することができますが、それが弱いモーダルと分類されたとしても、非モーダルになるわけではありません。シングルアクションのアラートは可能な限り避けましょう。
 
@@ -171,7 +177,7 @@ OKボタンが一つしかないアラートダイアログは比較的簡単に
 
 ### 非モーダル＝モードレス (Non-Modal = Modeless)
 
-<figure><img alt="iOSのシステム通知、システム音量スライダー、画面下部の検索フィールド付き非モーダルのパレットシートの説明図。" src="{{ site.indexurl }}/assets/images/non-modal-overlay.svg"></figure>
+<figure><img alt="iOSのシステム通知、システム音量スライダー、画面下部の検索フィールド付き非モーダルのパレットシートの説明図。" src="{{ baseurl }}/assets/images/non-modal-overlay.svg"></figure>
 
 <small class="callout"><span class="callout-title">訳者注釈</span>：
 訳者の方で「モードレス（Modeless）」の言葉を強調しています。
@@ -198,7 +204,7 @@ Photoshopなどに見られるパレット系のUIを指しているのだと思
 
 ### 状態変化 (State Change)
 
-<figure><img alt="同じ画面を2つの状態で表した図。読み込み中の状態と読み込みが完了したリストの状態。" src="{{ site.indexurl }}/assets/images/state-change.svg"></figure>
+<figure><img alt="同じ画面を2つの状態で表した図。読み込み中の状態と読み込みが完了したリストの状態。" src="{{ baseurl }}/assets/images/state-change.svg"></figure>
 
 ビューは複数の状態を持つことができます。例えば、ビューの読み込み中にプログレスインジケータを表示し、読み込み完了後にそれをコンテンツに置き換えても、階層自体の位置変化は起こりません。（単一のビューが状態変化したと見做せます。）
 
@@ -215,7 +221,7 @@ Photoshopなどに見られるパレット系のUIを指しているのだと思
 
 ### ステップ・バイ・ステップ (Step-by-Step)
 
-<figure><img alt="チェックアウトの進捗を表した図と、オンボーディングフローの図。それぞれは4つのステップを持っている。" src="{{ site.indexurl }}/assets/images/step-by-step.svg"></figure>
+<figure><img alt="チェックアウトの進捗を表した図と、オンボーディングフローの図。それぞれは4つのステップを持っている。" src="{{ baseurl }}/assets/images/step-by-step.svg"></figure>
 
 ステップ・バイ・ステップパターンは、ガイドツアー、セットアップのフロー、オンボーディング／チュートリアル、オンラインストアの情報入力のような場面で、一連の流れを直線的に繋ぐものです。
 
@@ -239,7 +245,7 @@ iOSではステップ・バイ・ステップのウィザードUIにもドリル
 
 ### コンテンツ主体 (Content-Driven)
 
-<figure><img alt="iPhoneの3つの画面イメージで、それらはハイパーテキストのリンクの様子と、各画面を任意につなぐ矢印を表している。" src="{{ site.indexurl }}/assets/images/content-driven.svg"></figure>
+<figure><img alt="iPhoneの3つの画面イメージで、それらはハイパーテキストのリンクの様子と、各画面を任意につなぐ矢印を表している。" src="{{ baseurl }}/assets/images/content-driven.svg"></figure>
 
 コンテンツ主体のナビゲーション<sup class="note">[3](#note3)</sup>（非線形ナビゲーション、体験主体型のナビゲーション）とは、ハイパーリンクやボタンによって、他のページやビューに移動できるパターンです。Webブラウザのナビゲーションはこの方式です。
 
