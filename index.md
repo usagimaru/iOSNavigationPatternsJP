@@ -1,13 +1,9 @@
-<head>
-	<link rel="stylesheet" href="{{ site.url }}/assets/css/styles.css">
-</head>
-
 # モダンiOSナビゲーションパターン 日本語訳
 <p class="subtitle">Modern iOS Navigation Patterns (Japanese Ver.)</p>
 
 {% include desc.html %}
 
-
+<!-- <div>Last modified at: {{ page.last_modified_at | date: "%Y-%m-%d %H:%M:%S" }}</div> -->
 
 #### 目次
 * TOC
