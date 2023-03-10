@@ -1,5 +1,5 @@
 <head>
-	<link rel="stylesheet" href="/assets/css/styles.css">
+	<link rel="stylesheet" href="./assets/css/styles.css">
 </head>
 
 # モダンiOSナビゲーションパターン 日本語訳
