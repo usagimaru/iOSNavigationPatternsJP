@@ -110,7 +110,7 @@ iOSの “写真” appはピラミッドパターンを採用しています。
 
 ### ハブ・アンド・スポーク (Hub-and-Spoke)<sup class="note">[2](#note2)</sup>
 
-<figure><img alt="iPhoneのホーム画面（ハブ）と、2つのapp（スポーク）の図" src="/assets/images/hub-and-spoke.svg"></figure>
+<figure><img alt="iPhoneのホーム画面（ハブ）と、2つのapp（スポーク）の図" src="{{ site.rootpath }}/assets/images/hub-and-spoke.svg"></figure>
 
 ハブ・アンド・スポークパターンは、互いに関連性の低い項目群で構成される大きなコレクションを階層化させたい場合に最適です。子ビューはフルスクリーンで展開されますが、それらを切り替えるためには最初のハブに戻る動きをします。
 
@@ -150,7 +150,7 @@ iPhoneの画面下部にあるホームインジケータ（横長の棒のこ�
 
 ### 弱いモーダル (Low-Friction Modal)
 
-<figure><img alt="シンプルなクローズボタンを持つシートと、フルスクリーンメディアプレーヤーのイラスト。iPadのコンテクストメニューとポップオーバーのイラスト。" src="/assets/images/low-friction-modal.svg"></figure>
+<figure><img alt="シンプルなクローズボタンを持つシートと、フルスクリーンメディアプレーヤーのイラスト。iPadのコンテクストメニューとポップオーバーのイラスト。" src="{{ site.rootpath }}/assets/images/low-friction-modal.svg"></figure>
 
 <small class="callout"><span class="callout-title">訳者注釈</span>：
 “Low-Friction”を「（干渉の度合いが）弱い」と訳しています。
