@@ -5,6 +5,7 @@ lang: ja
 description: "Modern iOS Navigation Patternsの日本語訳版です。"
 author: usagimaru
 url: "https://usagimaru.github.io/iOSNavigationPatternsJP"
+url: "https://usagimaru.github.io"
 plugins:
   - jekyll-sitemap
   - jekyll-last-modified-at
