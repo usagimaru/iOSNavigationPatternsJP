@@ -97,7 +97,7 @@ iOSのドリルダウンナビゲーションは、macOSのFinderが採用する
 
 ### ピラミッド (Pyramid)
 
-<figure><img alt="サムネイルが並ぶ一覧と、ページインジケーター付きの詳細ビューが3つ並んでいる図" src="https://frankrausch.com/media/pages/tutorials/ios-navigation/d4829d2187-1669390105/pyramid.svg"></figure>
+<figure><img alt="サムネイルが並ぶ一覧と、ページインジケーター付きの詳細ビューが3つ並んでいる図" src="{{ site.rootpath }}/assets/images/pyramid.svg"></figure>
 
 ピラミッドパターンでは、同じ階層にある兄弟ビュー間を移動する際に、わざわざ親スクリーン（レベル）に戻ることなくその場で素早く移動することができます。
 
@@ -133,7 +133,7 @@ iPhoneの画面下部にあるホームインジケータ（横長の棒のこ�
 
 ### 強いモーダル (High-Friction Modal)
 
-<figure><img alt="iOSのモーダルシートとモーダルアラートダイアログの図" src="/assets/images/high-friction-modal.svg"></figure>
+<figure><img alt="iOSのモーダルシートとモーダルアラートダイアログの図" src="{{ site.rootpath }}/assets/images/high-friction-modal.svg"></figure>
 
 <small class="callout"><span class="callout-title">訳者注釈</span>：
 “High-Friction”を「（干渉の度合いが）強い」と訳しています。
@@ -160,7 +160,7 @@ iPhoneの画面下部にあるホームインジケータ（横長の棒のこ�
 
 すなわち、簡単に破棄できるということです。「弱い干渉」とは、そのモードから逃れる方法を深く考える必要がないことを意味します。閉じるボタンを押すか、シートを下にスワイプするか、コンテクストメニューやポップオーバーの外側をタップしたりすれば、この種のモーダルビューはすぐに消えてしまいます。
 
-<figure><img alt="モーダルアラートダイアログのメッセージと、ダイアログを解除する唯一の手段であるOKボタンのイラスト" src="/assets/images/low-friction-modal-2.svg"></figure>
+<figure><img alt="モーダルアラートダイアログのメッセージと、ダイアログを解除する唯一の手段であるOKボタンのイラスト" src="{{ site.rootpath }}/assets/images/low-friction-modal-2.svg"></figure>
 
 OKボタンが一つしかないアラートダイアログは比較的簡単に排除することができますが、それが弱いモーダルと分類されたとしても、非モーダルになるわけではありません。シングルアクションのアラートは可能な限り避けましょう。
 
@@ -169,7 +169,7 @@ OKボタンが一つしかないアラートダイアログは比較的簡単に
 
 ### 非モーダル＝モードレス (Non-Modal = Modeless)
 
-<figure><img alt="iOSのシステム通知、システム音量スライダー、画面下部の検索フィールド付き非モーダルのパレットシートの説明図。" src="/assets/images/non-modal-overlay.svg"></figure>
+<figure><img alt="iOSのシステム通知、システム音量スライダー、画面下部の検索フィールド付き非モーダルのパレットシートの説明図。" src="{{ site.rootpath }}/assets/images/non-modal-overlay.svg"></figure>
 
 <small class="callout"><span class="callout-title">訳者注釈</span>：
 訳者の方で「モードレス（Modeless）」の言葉を強調しています。
@@ -196,7 +196,7 @@ Photoshopなどに見られるパレット系のUIを指しているのだと思
 
 ### 状態変化 (State Change)
 
-<figure><img alt="同じ画面を2つの状態で表した図。読み込み中の状態と読み込みが完了したリストの状態。" src="/assets/images/state-change.svg"></figure>
+<figure><img alt="同じ画面を2つの状態で表した図。読み込み中の状態と読み込みが完了したリストの状態。" src="{{ site.rootpath }}/assets/images/state-change.svg"></figure>
 
 ビューは複数の状態を持つことができます。例えば、ビューの読み込み中にプログレスインジケータを表示し、読み込み完了後にそれをコンテンツに置き換えても、階層自体の位置変化は起こりません。（単一のビューが状態変化したと見做せます。）
 
@@ -213,7 +213,7 @@ Photoshopなどに見られるパレット系のUIを指しているのだと思
 
 ### ステップ・バイ・ステップ (Step-by-Step)
 
-<figure><img alt="チェックアウトの進捗を表した図と、オンボーディングフローの図。それぞれは4つのステップを持っている。" src="/assets/images/step-by-step.svg"></figure>
+<figure><img alt="チェックアウトの進捗を表した図と、オンボーディングフローの図。それぞれは4つのステップを持っている。" src="{{ site.rootpath }}/assets/images/step-by-step.svg"></figure>
 
 ステップ・バイ・ステップパターンは、ガイドツアー、セットアップのフロー、オンボーディング／チュートリアル、オンラインストアの情報入力のような場面で、一連の流れを直線的に繋ぐものです。
 
@@ -237,7 +237,7 @@ iOSではステップ・バイ・ステップのウィザードUIにもドリル
 
 ### コンテンツ主体 (Content-Driven)
 
-<figure><img alt="iPhoneの3つの画面イメージで、それらはハイパーテキストのリンクの様子と、各画面を任意につなぐ矢印を表している。" src="/assets/images/content-driven.svg"></figure>
+<figure><img alt="iPhoneの3つの画面イメージで、それらはハイパーテキストのリンクの様子と、各画面を任意につなぐ矢印を表している。" src="{{ site.rootpath }}/assets/images/content-driven.svg"></figure>
 
 コンテンツ主体のナビゲーション<sup class="note">[3](#note3)</sup>（非線形ナビゲーション、体験主体型のナビゲーション）とは、ハイパーリンクやボタンによって、他のページやビューに移動できるパターンです。Webブラウザのナビゲーションはこの方式です。
 
