@@ -7,7 +7,6 @@
 
 {% include desc.html %}
 
-{{ page.last_modified_at }}
 
 
 #### 目次

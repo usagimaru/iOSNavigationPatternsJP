@@ -8,3 +8,6 @@ url: "https://usagimaru.github.io"
 plugins:
   - jekyll-sitemap
   - jekyll-last-modified-at
+
+# Fix "GitHub Metadata: No GitHub API authentication…" message
+github : [metadata]
