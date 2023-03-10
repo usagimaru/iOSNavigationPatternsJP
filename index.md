@@ -28,13 +28,13 @@
 
 ドリルダウンナビゲーションは、情報のツリー構造をカスケーディングリストとして構成し、レベル単位やスクリーン単位で横断します。
 
-遷移は、列（リスト）間の水平移動を意味します。右へ移動するとツリーの階層（レベル）が深くなり、左へ移動すると階層（レベル）をさかのぼります。
+ここでの遷移は、列（リスト）間の水平移動を意味します。右へ移動するとツリーの階層（レベル）が深くなり、逆に左へ移動すると階層（レベル）が浅くなります。
 遷移の表現にはアニメーションが適用されます。
 
 ドリルダウンナビゲーションはステートレスです。常に階層移動が可能であり、状態を保存するかどうか等の問いかけによって移動が中断されることはありません。
 
 <small class="callout"><span class="callout-title">訳者注釈</span>：
-ユーザーの意思による階層移動が何かによって止めらないことを意味します。例えば、バックボタンを押した際にアラートダイアログを割り込ませて戻る動作を一時停止させるといったことは、基本的にはできないようになっています。
+ユーザーの意思による階層移動が何かによって止めらないことを意味します。例えば、バックボタンを押した際にアラートダイアログを割り込ませて戻る動作を一時停止させるといったことは、基本的にはできないようになっています。もしもそのようなインタラクションを組み込みたいのならば、後述するモーダルビュー関連のパターンを検討してください。
 </small>
 
 ナビゲーションバーには、現在の階層に関するタイトルを表示します。
@@ -54,7 +54,7 @@ iOSのドリルダウンナビゲーションは、macOSのFinderが採用する
 
 <small class="callout"><span class="callout-title">訳者注釈</span>：
 ここで言う音楽プレーヤーの例は、iTunes / Music.appの**[カラムブラウザ](https://support.apple.com/ja-jp/guide/music/muscde0b85e0/mac)**を指していると思われます。ジャンル、アーティスト、アルバムの3列表示によって目的の楽曲を絞り込めるUIでは、選択した項目によって、情報が絞り込まれた形で下層のリストが動的に再構築されます。例えばジャンルに「J-Pop」を選択すると、J-Popに紐づけられたアーティストのみのリストとアルバムのリストが再構築されます。<br/>
-“Miller Columns” とはカスケーディングリストパターンの別名です。macOSのFinderにおける「カラム表示」や、iTunes / Music.appにおけるアルバムブラウザ、iOSのUINavigationControllerは典型的なMiller Columnsです。<br/>
+“Miller Columns” とはカスケーディングリストパターンの別名です。macOSのFinderにおける「カラム表示」や、iTunes / Music.appにおけるカラムブラウザ、iOSのUINavigationControllerは典型的なMiller Columnsです。<br/>
 関連資料：
 [Who invented Miller columns? [closed]](https://stackoverflow.com/questions/19537413/who-invented-miller-columns)
 </small>
@@ -92,7 +92,8 @@ iOSのドリルダウンナビゲーションは、macOSのFinderが採用する
 
 悪名高いハンバーガーメニューは、タブバーにとっての悪い兄弟分です。ナビゲーションUI全体が小さな3本線のアイコンに隠されていると、それらの要素を見つけにくくなってしまいます。ハンバーガーメニューは2015年頃から数年くらいの間iOSのデザインでも流行していましたが、タブバーの方がより発見可能性が高く使いやすいという調査結果が明らかになったため、app開発者たちは次第にハンバーガーメニューを廃止しました。
 
-[ハンバーガーメニューを廃止したSpotifyの例](https://techcrunch.com/2016/05/03/spotify-ditches-the-controversial-hamburger-menu-in-ios-app-redesign/)
+- [Nielsen Normal Groupによる見解: Hamburger Menus and Hidden Navigation Hurt UX Metrics](https://www.nngroup.com/articles/hamburger-menus/)
+- [ハンバーガーメニューを廃止したSpotifyの例](https://techcrunch.com/2016/05/03/spotify-ditches-the-controversial-hamburger-menu-in-ios-app-redesign/)
 
 
 ### ピラミッド (Pyramid)
