@@ -1,5 +1,5 @@
 <head>
-	<link rel="stylesheet" href="./assets/css/styles.css">
+	<link rel="stylesheet" href="{{ site.rootpath }}/assets/css/styles.css">
 </head>
 
 # モダンiOSナビゲーションパターン 日本語訳
@@ -24,7 +24,7 @@
 
 ### ドリルダウン (Drill-Down)
 
-<figure><img alt="カスケードリストの概念を示すためにドリルダウンの列を横に並べた図" src="/assets/images/drill-down.svg"></figure>
+<figure><img alt="カスケードリストの概念を示すためにドリルダウンの列を横に並べた図" src="{{ site.rootpath }}/assets/images/drill-down.svg"></figure>
 
 ドリルダウンナビゲーションは、情報のツリー構造をカスケーディングリストとして構成し、レベル単位やスクリーン単位で横断します。
 
@@ -62,7 +62,7 @@ iOSのドリルダウンナビゲーションは、macOSのFinderが採用する
 
 ### フラット (Flat)
 
-<figure><img alt="下部にタブバーを持つiPhoneと、サイドバーを持つiPadの図" src="/assets/images/flat.svg"></figure>
+<figure><img alt="下部にタブバーを持つiPhoneと、サイドバーを持つiPadの図" src="{{ site.rootpath }}/assets/images/flat.svg"></figure>
 
 フラットナビゲーションパターンは、ルートレベルで階層を並列に区分し、大抵はタブバーの形で表します。iPadOSではタブバーの代わりにサイドバーを用いることがあります。
 
