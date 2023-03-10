@@ -4,3 +4,7 @@ title: モダンiOSナビゲーションパターン 日本語訳
 lang: ja
 description: "Modern iOS Navigation Patternsの日本語訳版です。"
 author: usagimaru
+url: "https://usagimaru.github.io/iOSNavigationPatternsJP"
+plugins:
+  - jekyll-sitemap
+  - jekyll-last-modified-at
