@@ -4,10 +4,10 @@ title: モダンiOSナビゲーションパターン 日本語訳
 
 <p class="subtitle">Modern iOS Navigation Patterns (Japanese Ver.)</p>
 
-{% if site.host == site.localhost %}
-{% assign baseurl = site.url %}
-{% else %}
+{% if site.host != site.localhost %}
 {% assign baseurl = site.indexurl %}
+{% else %}
+{% assign baseurl = site.url %}
 {% endif %}
 
 {% include desc.html %}
