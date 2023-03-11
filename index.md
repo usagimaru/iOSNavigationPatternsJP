@@ -5,10 +5,7 @@ title: モダンiOSナビゲーションパターン 日本語訳
 <p class="subtitle">Modern iOS Navigation Patterns (Japanese Ver.)</p>
 
 {% assign baseurl = site.indexurl %}
-
 {% include desc.html %}
-
-<!-- <div>Last modified at: {{ page.last_modified_at | date: "%Y-%m-%d %H:%M:%S" }}</div> -->
 
 #### 目次
 * TOC
