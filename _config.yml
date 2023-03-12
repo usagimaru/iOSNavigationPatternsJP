@@ -2,7 +2,7 @@ theme: minima
 markdown: kramdown
 title: モダンiOSナビゲーションパターン 日本語訳
 lang: ja
-description: "Modern iOS Navigation Patternsの日本語訳版です。"
+description: "Modern iOS Navigation Patternsの日本語訳版です。ドリルダウンやモーダル、ピラミッド、シーケンスなどのよく知られたナビゲーションパターンを解説します。"
 author: usagimaru
 localhost: "127.0.0.1"
 url: "https://usagimaru.github.io"
