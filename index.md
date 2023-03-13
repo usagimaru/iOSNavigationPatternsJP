@@ -2,7 +2,7 @@
 title: モダンiOSナビゲーションパターン 日本語訳
 ---
 
-<p class="subtitle">Modern iOS Navigation Patterns (Japanese Ver.)</p>
+<p class="subtitle">Modern iOS Navigation Patterns (Japanese Text Ver.)</p>
 
 {% assign baseurl = site.indexurl %}
 {% include desc.html %}
