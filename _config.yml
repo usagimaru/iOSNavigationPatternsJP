@@ -11,5 +11,11 @@ plugins:
   - jekyll-sitemap
   - jekyll-last-modified-at
 
+exclude:
+  - MAINTENANCE.md
+  - Gemfile
+  - Gemfile.lock
+  - vendor
+
 # Fix "GitHub Metadata: No GitHub API authentication…" message
 github : [metadata]
